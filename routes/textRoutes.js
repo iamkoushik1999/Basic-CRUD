@@ -7,10 +7,10 @@ const {
   deleteText,
 } = require("../controllers/textController");
 
-router.get("/", getText);
-router.post("/", setText);
+router.get("/", getText).post(setText);
+// router.post("/", setText);
 
-router.put("/:id", updateText);
-router.delete("/:id", deleteText);
+router.put("/:id", updateText).delete(deleteText);
+// router.delete("/:id", deleteText);
 
 module.exports = router;
